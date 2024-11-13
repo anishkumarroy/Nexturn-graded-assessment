@@ -14,7 +14,6 @@ function parseJSONData(data) {
 }
 
 let products = parseJSONData(jsonData);
-// console.log(products)
 
 function addProduct(newProduct) {
     products.push(newProduct);
@@ -33,7 +32,9 @@ function updateProductPrice(productId, newPrice) {
 }
 
 function getAvailableProducts() {
-    return products.filter(product => product.available);
+    return products.filter(p=> p.available ===true);
+
+    // return products.filter(product => product.available);
 }
 
 
